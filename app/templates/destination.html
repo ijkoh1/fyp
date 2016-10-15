@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div class="jumbotron" style="padding-top: 100px; padding-bottom: 100px; margin-top:200px; margin-bottom:200px">
+                <h1>Find Your Taxi Stand</h1>
+                <div class="form-group">
+                    <form action="" method="post" name="login">
+                        {{form.hidden_tag()}}
+                        <p>
+                            Please enter your location: <br> {{form.start(size=80)}} <br>
+                        </p>
+                        <p><input type="checkbox" name="checked" value="NumTaxi" checked>Number of Taxi Stand</p>
+                        <p><input type="checkbox" name="checked" value="COP" checked>Chance of peak and customer's prefered times</p>
+                        <p><input type="submit" value="Calculate" class="btn btn-info"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

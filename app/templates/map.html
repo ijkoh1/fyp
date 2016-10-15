@@ -1,0 +1,95 @@
+{% extends "bootstrap/base.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div class="jumbotron" style="padding-top: 20px; padding-bottom: 20px; margin-top:80px; margin-bottom:80px">
+                <h3><div>Start: </div><div id="start">{{start.location}}</div></h3>
+                <h3><div>Taxi Destination: </div><div id="end">{{bestTaxiStand.bestTaxiStand.getStandLoc()}}</div></h3>
+                <h3><div id="taxi">TaxiNum: {{bestTaxiStand.bestTaxiStand.getTaxiNum()}}</div></h3>
+                <h3><div id="distance">Distance: {{bestTaxiStand.bestTaxiStand.getDistance()}}</div></h3>
+                <h3><div>Score: {{bestTaxiStand.bestTaxiStand.getScore()}}</div></h3>
+                <div class="container-fluid" style="height:500px">
+                    <div id="map" style="width:100%; height:100%; padding-top: 80px; padding-bottom: 80px"></div>
+                </div>
+                <p><a href="{{ url_for('gg') }}">Search Again</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+  <h2>List of other Taxi Stand options</h2>
+  <div class="list-group">
+    <a onClick="changeRoute(document.getElementById('list_1').innerHTML)" href="#" class="list-group-item">
+      <h4 id="list_1" class="list-group-item-heading">{{standList1.standList1.getStandLoc()}}</h4>
+      <p class="list-group-item-text">Distance: {{standList1.standList1.getDistance()}}</p>
+      <p class="list-group-item-text">Number of Taxi Stationed: {{standList1.standList1.getTaxiNum()}}</p>
+      <p class="list-group-item-text">Passenger's Preferred Times: {{standList1.standList1.getPassengerTime()}}</p>
+      <p class="list-group-item-text">Chances of Peak Customers: {{standList1.standList1.getPeakChance()}}</p>
+      <p class="list-group-item-text">Score: {{standList1.standList1.getScore()}}</p>
+    </a>
+    <a onClick="changeRoute(document.getElementById('list_2').innerHTML)" href="#" class="list-group-item">
+      <h4 id="list_2" class="list-group-item-heading">{{standList2.standList2.getStandLoc()}}</h4>
+      <p class="list-group-item-text">Distance: {{standList2.standList2.getDistance()}}</p>
+      <p class="list-group-item-text">Number of Taxi Stationed: {{standList2.standList2.getTaxiNum()}}</p>
+      <p class="list-group-item-text">Passenger's Preferred Times: {{standList2.standList2.getPassengerTime()}}</p>
+      <p class="list-group-item-text">Chances of Peak Customers: {{standList2.standList2.getPeakChance()}}</p>
+      <p class="list-group-item-text">Score: {{standList2.standList2.getScore()}}</p>
+    </a>
+    <a onClick="changeRoute(document.getElementById('list_3').innerHTML)" href="#" class="list-group-item">
+      <h4 id="list_3" class="list-group-item-heading">{{standList3.standList3.getStandLoc()}}</h4>
+      <p class="list-group-item-text">Distance: {{standList3.standList3.getDistance()}}</p>
+      <p class="list-group-item-text">Number of Taxi Stationed: {{standList3.standList3.getTaxiNum()}}</p>
+      <p class="list-group-item-text">Passenger's Preferred Times: {{standList3.standList3.getPassengerTime()}}</p>
+      <p class="list-group-item-text">Chances of Peak Customers: {{standList3.standList3.getPeakChance()}}</p>
+      <p class="list-group-item-text">Score: {{standList3.standList3.getScore()}}</p>
+    </a>
+  </div>
+</div>
+
+{% endblock %}
+{% block scripts %}
+<script>
+    var map;
+
+    function initMap() {
+        var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+        var latlong = {
+            lat: -34.397,
+            lng: 150.644
+        };
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: latlong,
+            zoom: 8
+        });
+        var marker = new google.maps.Marker({
+            position: latlong,
+            map: map
+        });
+        directionsDisplay.setMap(map);
+        displayRoute(directionsService, directionsDisplay);
+    }
+
+    function displayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+            origin: document.getElementById('start').innerHTML,
+            destination: document.getElementById('end').innerHTML,
+            travelMode: 'DRIVING'
+        }, function(response, status) {
+            if (status === 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    }
+
+    function changeRoute(newDestination){
+      document.getElementById('end').innerHTML = newDestination;
+      initMap();
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwrajId_A0OiqzGWpP2cLtcIWX5Z9E55E&callback=initMap" async defer></script>
+{{super()}} {% endblock %}
