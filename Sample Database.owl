@@ -1,0 +1,516 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#"
+     xml:base="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-3="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Drives -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Drives">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#From -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#From">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Waits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Waits">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Car_Plate_Number -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Car_Plate_Number">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Chance_Of_Peak -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Chance_Of_Peak">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Number_of_Taxi_Stationed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Number_of_Taxi_Stationed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Passenger_Timings -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Passenger_Timings">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_Location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_Location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_1"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Distance_3"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_1"/>
+        <Road_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunway Pyramid Shopping Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_2"/>
+        <Road_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunway Pyramid Shopping Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_3"/>
+        <Road_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 Utama Shopping Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_4"/>
+        <Road_Location>KDU College, LDP</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_5"/>
+        <Road_Location>Paradigm Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_6"/>
+        <Road_Location>Paradigm Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_7"/>
+        <Road_Location>1 Utama Shopping Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Road"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_8"/>
+        <Road_Location>1 Utama Shopping Mall</Road_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_1"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GHJ 1234</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_2"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JIK 9999</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_3"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QOK 3401</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_4"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GJK 8032</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_5"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KOL 1992</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_6"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FMS 3245</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_7"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMM 0000</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Car"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_8"/>
+        <Car_Plate_Number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MMQ 9922</Car_Plate_Number>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacky</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Driver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Afternoon</Passenger_Timings>
+        <Taxi_Stand_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunway Pyramid Shopping Mall</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Night</Passenger_Timings>
+        <Taxi_Stand_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 Utama Shopping Mall</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Morning</Passenger_Timings>
+        <Taxi_Stand_Location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KDU College, LDP</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Afternoon</Passenger_Timings>
+        <Taxi_Stand_Location>Paradigm Mall</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Night</Passenger_Timings>
+        <Taxi_Stand_Location>IOI Mall Puchong Bandar Puchong Jaya Puchong Selangor Malaysia</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Evening</Passenger_Timings>
+        <Taxi_Stand_Location>Kuala Lumpur International Airport</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Evening</Passenger_Timings>
+        <Taxi_Stand_Location>Persiaran Wawasan, Pusat Bandar Puchong</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand_8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ivan/ontologies/2016/7/untitled-ontology-3#Taxi_Stand"/>
+        <Chance_Of_Peak rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</Chance_Of_Peak>
+        <Number_of_Taxi_Stationed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</Number_of_Taxi_Stationed>
+        <Passenger_Timings>Morning</Passenger_Timings>
+        <Taxi_Stand_Location>Ipoh Parade</Taxi_Stand_Location>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
